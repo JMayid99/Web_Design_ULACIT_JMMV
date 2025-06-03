@@ -1,61 +1,74 @@
+/* Reset default browser spacing and set the height of html and body to 100% */
 body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  height: 100%;        /* Make body and html take up the full viewport height */
+  margin: 0;           /* Remove default margin */
+  padding: 0;          /* Remove default padding */
 }
 
+/* Style for the container of the five sections */
 .cinco-secciones {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0;
-  height: 100vh;
-  width: 100vw;
+  display: grid;                /* Use CSS Grid layout */
+  grid-template-columns: 1fr 1fr; /* Create two equal-width columns */
+  grid-template-rows: 1fr 1fr 1fr; /* Create three equal-height rows */
+  gap: 0;                       /* No gap between grid items */
+  height: 100vh;                /* Full viewport height */
+  width: 100vw;                 /* Full viewport width */
 }
 
+/* Common styles for each section */
 .seccion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  padding: 20px;
-  box-sizing: border-box;
+  display: flex;                /* Use Flexbox inside each section */
+  flex-direction: column;       /* Arrange content vertically */
+  align-items: center;          /* Horizontally center content */
+  justify-content: center;      /* Vertically center content */
+  font-size: 1.2rem;            /* Set font size */
+  padding: 20px;                /* Padding inside each section */
+  box-sizing: border-box;       /* Include padding in width and height calculations */
 }
 
-/* Distribución visual:
+/* 
+   Visual layout of sections:
    | 1 | 2 |
    | 3 | 4 |
-   | 5 |
+   | 5     |
 */
 
+/* Style for the first section */
 .seccion-1 {
-  background: #fff9b1; /* Amarillo claro */
-  font-family: 'Merriweather', serif;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  background: #fff9b1;              /* Light yellow background */
+  font-family: 'Merriweather', serif; /* Serif font family */
+  grid-column: 1 / 2;               /* Place in first column */
+  grid-row: 1 / 2;                  /* Place in first row */
 }
+
+/* Style for the second section */
 .seccion-2 {
-  background: #caffc7; /* Verde claro */
-  font-family: 'Lora', serif;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  background: #caffc7;              /* Light green background */
+  font-family: 'Lora', serif;       /* Another serif font family */
+  grid-column: 2 / 3;               /* Place in second column */
+  grid-row: 1 / 2;                  /* Place in first row */
 }
+
+/* Style for the third section */
 .seccion-3 {
-  background: #c5ebff; /* Celeste claro */
-  font-family: 'Roboto', sans-serif;
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  background: #c5ebff;              /* Light blue background */
+  font-family: 'Roboto', sans-serif; /* Sans-serif font family */
+  grid-column: 1 / 2;               /* Place in first column */
+  grid-row: 2 / 3;                  /* Place in second row */
 }
+
+/* Style for the fourth section */
 .seccion-4 {
-  background: #ffd6b1; /* Anaranjado claro */
-  font-family: 'Open Sans', sans-serif;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  background: #ffd6b1;              /* Light orange background */
+  font-family: 'Open Sans', sans-serif; /* Another sans-serif font family */
+  grid-column: 2 / 3;               /* Place in second column */
+  grid-row: 2 / 3;                  /* Place in second row */
 }
+
+/* Style for the fifth section, which spans both columns */
 .seccion-5 {
-  background: #fddbff; /* Rosa claro */
-  font-family: 'Pacifico', cursive;
-  grid-column: 1 / 3;
-  grid-row: 3 / 4;
+  background: #fddbff;              /* Light pink background */
+  font-family: 'Pacifico', cursive; /* Cursive font family */
+  grid-column: 1 / 3;               /* Span both columns */
+  grid-row: 3 / 4;                  /* Place in third row */
 }
